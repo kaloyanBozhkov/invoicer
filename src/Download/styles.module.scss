@@ -1,0 +1,22 @@
+.download {
+    background: none;
+    border: none;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 10px;
+
+    border: 1px solid var(--main-color);
+    color: white;
+    font-weight: bold;
+    background-color: var(--main-color);
+
+    transition: all 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: var(--main-color);
+    }
+}

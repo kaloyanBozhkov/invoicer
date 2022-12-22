@@ -1,0 +1,24 @@
+.companyDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+
+    &[data-direction="to"] {
+        align-items: flex-start;
+    }
+
+    &[data-direction="from"] {
+        align-items: flex-end;
+    }
+
+    p {
+        &:first-child {
+            font-size: var(--small-font);
+            margin-bottom: -10px;
+        }
+        font-size: var(--base-font);
+        margin: 0;
+        color: var(--main-text);
+    }
+}

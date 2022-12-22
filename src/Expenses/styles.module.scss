@@ -1,0 +1,129 @@
+.expenses {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+    margin-bottom: -60px;
+    position: relative;
+
+    p {
+        font-size: var(--base-font);
+    }
+
+    p,
+    h3 {
+        margin: 0;
+        color: var(--main-text);
+    }
+
+    .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        .heading {
+            padding-bottom: 5px;
+            position: relative;
+            h3 {
+                font-size: var(--small-font);
+            }
+        }
+
+        &:first-child {
+            min-width: 600px;
+        }
+
+        &:last-child {
+            p,
+            h3 {
+                text-align: right;
+            }
+        }
+
+        .lastCol {
+            position: relative;
+            padding-right: 50px;
+            margin-right: -50px;
+            .actionRow {
+                position: absolute;
+                right: 0px;
+                top: -7px;
+                bottom: 0;
+                display: none;
+            }
+
+            &:hover {
+                .actionRow {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    [data-absolute="bottom"] {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .action {
+        display: none;
+        padding: 20px 0;
+        margin-bottom: -100px;
+
+        &:hover {
+            opacity: 1;
+            display: block;
+        }
+
+        input {
+            border: none;
+            background: none;
+            background-color: white;
+            color: var(--main-text);
+            height: 30px;
+            width: 95%;
+            margin-right: 5%;
+            transition: all 300ms;
+            border-bottom: 1px solid var(--main-color);
+            outline: none;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    &:hover,
+    &[data-actions-active="true"] {
+        .action {
+            display: block;
+        }
+    }
+
+    .removeBtn {
+        border: none;
+        background: none;
+        background-color: white;
+        border: 1px solid var(--main-color);
+        color: var(--main-color);
+        font-weight: bold;
+        width: 30px;
+        height: 30px;
+        border-radius: 25%;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            color: white;
+            background-color: var(--main-color);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.amountDue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 500px;
+    div {
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+            p:first-child {
+                color: var(--main-color);
+                font-weight: bold;
+            }
+        }
+        p {
+            font-size: var(--base-font);
+            color: var(--main-text);
+        }
+    }
+}
