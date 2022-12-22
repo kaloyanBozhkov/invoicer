@@ -2,7 +2,7 @@
 import { info as hiddenInfo } from './_info'
 
 const defaults = {
-  dateStartedWork: '',
+  dateStartedWork: 'MM/DD/YYYY',
   position: '',
   from: {
     title: '',
