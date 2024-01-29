@@ -28,6 +28,7 @@ const defaults = {
     currencyAcronym: '',
     baseSalary: 0,
   },
+  monthsPaused: 0,
 }
 
 export const info = {

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 
 import styles from './styles.module.scss'
+import { info } from '../constants/info'
 
 interface IDate {
   dateStartWork: string
@@ -23,7 +24,7 @@ export default function InvoiceDetails({ dateStartWork }: IDate) {
         return months <= 0 ? 0 : months
       }
 
-      return monthDiff(new Date(dateStartWork), new Date()) + 1 // for the current month
+      return monthDiff(new Date(dateStartWork), new Date()) - info.monthsPaused + 1 // for the current month
     }, [dateStartWork]),
     { issued, due } = useMemo(
       () => ({
